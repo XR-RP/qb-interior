@@ -1356,3 +1356,62 @@ exports('CreateV2Modern3', function(spawn)
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end)
+
+-- K4mv1 Vinewood V2 Shells -- https://www.k4mb1maps.com/package/5251329
+exports('VineWoodHouse1', function(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 11.86, "y": -2.73, "z": 3.96, "h": 2.11}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`vinewood_housing1_k4mb1`)
+	while not HasModelLoaded(`vinewood_housing1_k4mb1`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`vinewood_housing1_k4mb1`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end)
+
+
+exports('VineWoodHouse2', function(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 1.57, "y": 4.96, "z": 9.63, "h": 2.11}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`vinewood_housing2_k4mb1`)
+	while not HasModelLoaded(`vinewood_housing2_k4mb1`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`vinewood_housing2_k4mb1`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end)
+
+exports('VineWoodHouse3', function(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 3.41, "y": 7.11, "z": 2.76, "h": 2.11}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`vinewood_housing3_k4mb1`)
+	while not HasModelLoaded(`vinewood_housing3_k4mb1`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`vinewood_housing3_k4mb1`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end)
